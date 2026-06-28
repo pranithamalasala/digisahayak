@@ -1,18 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+  "experimentalServices": {
+    "frontend": {
+      "src": "frontend",
+      "framework": "vite"
     },
-    {
-      "src": "backend/run.py",
-      "use": "@vercel/python"
+    "backend": {
+      "src": "backend",
+      "framework": "flask"
     }
-  ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "backend/run.py" },
-    { "src": "/(.*)", "dest": "frontend/dist/index.html" }
-  ]
+  }
 }
