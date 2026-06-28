@@ -1,12 +1,12 @@
 {
   "experimentalServices": {
     "frontend": {
-      "src": "frontend",
-      "framework": "vite"
+      "framework": "vite",
+      "rootDirectory": "frontend"
     },
     "backend": {
-      "src": "backend",
-      "framework": "flask"
+      "framework": "flask",
+      "rootDirectory": "backend"
     }
   }
 }
